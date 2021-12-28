@@ -1,0 +1,21 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.7.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+    id 'java'
+}
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+    testCompile 'org.junit.platform:junit-platform-engine:1.7.0'
+    testCompile 'org.junit.platform:junit-platform-commons:1.7.0'
+    testCompile("org.assertj:assertj-core:3.11.1")
+}
+test {
+    useJUnitPlatform()
+}
